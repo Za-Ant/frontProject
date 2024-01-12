@@ -10,11 +10,25 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/destination/:slug',
-      name: 'destination',
-      component: () => import('../views/Destinations.vue'),
-      props: true,
-    }
+      path: '/properties',
+      name: 'properties',
+      component: () => import('../views/Properties.vue'),
+    },
+    {
+      path: '/details',
+      name: 'details',
+      component: () => import('../views/Details.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('../views/Contact.vue'),
+    },
+    {
+      path: '/schedule',
+      name: 'schedule',
+      component: () => import('../views/Schedule.vue'),
+    },
   ]
 })
 

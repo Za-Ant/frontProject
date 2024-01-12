@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import TheNavigation from './components/theNavigation.vue';
+
 </script>
 
 <template>
