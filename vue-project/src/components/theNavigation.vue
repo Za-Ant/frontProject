@@ -28,30 +28,26 @@ export default {
     data() {
         return {
             "destinations": [
-                {
-                    "name": "Home",
-                    "slug": "home",
-                    "id": 1
-                },
+                
                 {
                     "name": "Properties",
                     "slug": "properties",
-                    "id": 2
+                    "id": 1
                 },
                 {
                     "name": "Details",
                     "slug": "details",
-                    "id": 3
+                    "id": 2
                 },
                 {
                     "name": "Contact",
                     "slug": "contact",
-                    "id": 4
+                    "id": 3
                 },
                 {
                     "name": "Schedule",
                     "slug": "schedule",
-                    "id": 5
+                    "id": 4
                 }
             ]
         }

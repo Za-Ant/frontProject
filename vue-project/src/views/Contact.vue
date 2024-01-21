@@ -4,9 +4,7 @@
       <div class="row">
         <div class="col-lg-12">
           <span class="breadcrumb"><a>Home</a> / Contact</span>
-          <h3>Contact
-
-          </h3>
+          <h3>Contact</h3>
         </div>
       </div>
     </div>

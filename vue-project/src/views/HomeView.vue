@@ -1,5 +1,5 @@
 <template>
-  <div class="page-heading header-text">
+  <!-- <div class="page-heading header-text">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -7,7 +7,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="featured section">
     <div class="container">
@@ -74,7 +74,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
+        <!-- <div class="col-lg-3">
           <div class="info-table">
             <ul>
               <li>
@@ -95,7 +95,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

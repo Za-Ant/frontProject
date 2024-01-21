@@ -9,13 +9,12 @@
       </div>
     </div>
   </div>
-
   <div class="single-property section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
           <div class="main-image">
-            <img src="/images/single-property.jpg" alt="">
+            <img src="/images/banner-01.jpg" alt="">
           </div>
           <div class="main-content">
             <span class="category">Apparment</span>
