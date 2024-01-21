@@ -1,17 +1,16 @@
 <template>
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <span class="breadcrumb"><a>Home</a> / Contact</span>
+          <h3>Contact
+
+          </h3>
+        </div>
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
-
   <div class="contact-page section">
     <div class="container">
       <div class="row">
@@ -26,7 +25,7 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="item phone">
-                <img src="./images/phone-icon.png" alt="" style="max-width: 52px;">
+                <img src="/images/phone-icon.png" alt="" style="max-width: 52px;">
                 <h6>010-020-0340<br><span>Phone Number</span></h6>
               </div>
             </div>
@@ -39,36 +38,39 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <form id="contact-form" action="" method="post">
+          <form id="contact-form">
             <div class="row">
               <div class="col-lg-12">
                 <fieldset>
                   <label for="name">Full Name</label>
-                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required="">
+                  <input v-model="form.name" type="name" name="name" id="name" placeholder="Your Name..."
+                    autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
                   <label for="email">Email Address</label>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..."
-                    required="">
+                  <input v-model="form.email" type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                    placeholder="Your E-mail..." required="">
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
                   <label for="subject">Subject</label>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
+                  <input v-model="form.subject" type="subject" name="subject" id="subject" placeholder="Subject..."
+                    autocomplete="on">
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
                   <label for="message">Message</label>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  <textarea v-model="form.message" name="message" id="message" placeholder="Your Message"></textarea>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+                  <button type="submit" id="form-submit" class="orange-button" @click.prevent="submitForm">Send
+                    Message</button>
                 </fieldset>
               </div>
             </div>
@@ -88,6 +90,37 @@
   </div>
 </template>
 <script>
-import dataDestinations from '../data.json'
+export default {
+  data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      },
+    }
+  },
 
+  methods: {
+    submitForm() {
+      console.log(this.form);
+
+      if (this.form.message.length < 1) {
+        return 
+      }
+
+      alert(`Name: ${this.form.name} - email: ${this.form.email}`)
+
+      this.form.name = ''
+      this.form.email = ''
+      this.form.subject = ''
+      this.form.message = ''
+    }
+  },
+
+  updated() {
+    console.log(this.form);
+  }
+}
 </script>
