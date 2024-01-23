@@ -24,11 +24,12 @@
                 <li>Bathrooms: <span>{{ property.details.bathrooms }}</span></li>
                 <li>Area: <span>{{ property.details.area }}m2</span></li>
                 <li>Floor: <span>{{ property.details.floor }}</span></li>
-                <li>Parking: <span>{{ property.details.spots }} spots</span></li>
+                <li>Parking: <span>{{ property.details.parking }} spots</span></li>
+                <li>Contract: <span>{{ property.details.contract }} ready</span></li>
             </ul>
             <div class="main-button">
                 <RouterLink :to="{
-                    name: 'property-detail',
+                    name: 'schedule',
                     params: {
                         id: property.id
 

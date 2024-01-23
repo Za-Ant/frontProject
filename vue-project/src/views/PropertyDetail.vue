@@ -1,16 +1,7 @@
 <template>
     <div v-if="property">
 
-        <div class="page-heading header-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <span class="breadcrumb"><RouterLink :to="{ name: 'home'}">Home</RouterLink> / {{property.name }}</span>
-                        <h3>{{property.name }}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <TheHeader :title="property.name" />
 
         <div class="single-property section">
             <div class="container">
@@ -20,44 +11,49 @@
                             <img :src="property.image" alt="">
                         </div>
                         <div class="main-content">
-                            <span class="category">{{property.category }}</span>
-                            <h4>{{property.address }}</h4>
+                            <span class="category">{{ property.category }}</span>
+                            <h4>{{ property.address }}</h4>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="info-table">
                             <ul>
-                                <li>
-                                    <img src="/images/info-icon-01.png" alt="" style="max-width: 52px;">
-                                    <h4>{{property.details.area }} m2<br><span>Total Flat Space</span></h4>
-                                </li>
-                                <li>
-                                    <img src="/images/info-icon-02.png" alt="" style="max-width: 52px;">
-                                    <h4>Contract<br><span>Contract Ready</span></h4>
-                                </li>
-                                <li>
-                                    <img src="/images/info-icon-03.png" alt="" style="max-width: 52px;">
-                                    <h4>Payment<br><span>Payment Process</span></h4>
-                                </li>
-                                <li>
-                                    <img src="/images/info-icon-04.png" alt="" style="max-width: 52px;">
-                                    <h4>Safety<br><span>24/7 Under Control</span></h4>
-                                </li>
+                                <TableInfoCard :imageNumber="1" :title="property.details.area + ' m2'"
+                                    subtitle="Total Flat Space" />
+                                <TableInfoCard :imageNumber="2" title="Contract" subtitle="Contract Ready" />
+                                <TableInfoCard :imageNumber="3" title="Payment" subtitle="Payment Process" />
+                                <TableInfoCard :imageNumber="4" title="Safety" subtitle="24/7 Under Control" />
                             </ul>
                         </div>
                     </div>
+                    <p>Get <strong>the best villa agency</strong> HTML CSS Bootstrap Template for your company website.
+                        TemplateMo provides you the best free CSS templates in the world. Please tell your friends about it.
+                        Thank you. Cloud bread kogi bitters pitchfork shoreditch tumblr yr succulents single-origin coffee
+                        schlitz enamel pin you probably haven't heard of them ugh hella.
+
+                        <br><br>When you look for free CSS templates, you can simply type TemplateMo in any search engine
+                        website. In addition, you can type TemplateMo Digital Marketing, TemplateMo Corporate Layouts, etc.
+                        Master cleanse +1 intelligentsia swag post-ironic, slow-carb chambray knausgaard PBR&B DSA poutine
+                        neutra cardigan hoodie pop-up.
+                    </p>
+
                 </div>
+            </div>
         </div>
     </div>
-</div></template>
+</template>
 
 <script>
 import { mapState } from 'pinia';
-import { RouterLink } from 'vue-router';
 
 import { useProperties } from '@/stores/properties';
 
+import TheHeader from '@/components/theHeader.vue';
+import TableInfoCard from '@/components/TableInfoCard.vue';
+
 export default {
+    components: { TheHeader, TableInfoCard },
+
     props: {
         id: {
             type: String,
@@ -71,6 +67,5 @@ export default {
             return this.getPropertyById(this.id)
         }
     },
-    components: { RouterLink }
 }
 </script>

@@ -1,14 +1,5 @@
 <template>
-  <div class="page-heading header-text">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <span class="breadcrumb"><a>Home</a> / Contact</span>
-          <h3>Contact</h3>
-        </div>
-      </div>
-    </div>
-  </div>
+   <TheHeader title="Contact" />
   <div class="contact-page section">
     <div class="container">
       <div class="row">
@@ -88,6 +79,9 @@
   </div>
 </template>
 <script>
+import TheHeader from '../components/theHeader.vue';
+
+
 export default {
   data() {
     return {
@@ -100,6 +94,9 @@ export default {
     }
   },
 
+  components: {
+    TheHeader,
+  },
   methods: {
     submitForm() {
       console.log(this.form);

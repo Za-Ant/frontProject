@@ -12,7 +12,8 @@
           "bathrooms": 8,
           "area": 545,
           "floor": 3,
-          "parking": 6
+          "parking": 6,
+          "contract": 1
         }
       },
       {
@@ -27,7 +28,8 @@
           "bathrooms": 5,
           "area": 450,
           "floor": 3,
-          "parking": 8
+          "parking": 8,
+          "contract": 1
         }
       },
       {
@@ -42,7 +44,8 @@
           "bathrooms": 4,
           "area": 225,
           "floor": 3,
-          "parking": 10
+          "parking": 10,
+          "contract": 1
         }
       },
       {
@@ -57,7 +60,8 @@
           "bathrooms": 3,
           "area": 125,
           "floor": 25,
-          "parking": 2
+          "parking": 2,
+          "contract": 1
         }
       },
       {
@@ -72,7 +76,8 @@
           "bathrooms": 4,
           "area": 180,
           "floor": 34,
-          "parking": 2
+          "parking": 2,
+          "contract": 1
         }
       },
       {
@@ -87,7 +92,8 @@
           "bathrooms": 2,
           "area": 165,
           "floor": 26,
-          "parking": 3
+          "parking": 3,
+          "contract": 1
         }
       }
     ]

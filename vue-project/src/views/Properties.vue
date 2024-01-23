@@ -1,16 +1,6 @@
 
 <template>
-  <div class="page-heading header-text">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <span class="breadcrumb">VILLA / HOME</span>
-          <h3>Properties</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <TheHeader title="Properties" />
   <div class="section properties">
     <div class="container">
       <div class="row properties-box">
@@ -25,9 +15,11 @@ import { mapState } from 'pinia';
 
 import {useProperties} from '@/stores/properties'
 import PropertyCard from '@/components/PropertyCard.vue';
+import TheHeader from '../components/theHeader.vue';
 
 export default {
   components: {
+    TheHeader,
     PropertyCard
   },
 
@@ -45,4 +37,5 @@ export default {
     align-items: center;
   }
 }
+
 </style>
