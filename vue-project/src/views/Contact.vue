@@ -102,6 +102,7 @@ export default {
       console.log(this.form);
 
       if (this.form.message.length < 1) {
+        alert(`Sent text`)
         return 
       }
 
