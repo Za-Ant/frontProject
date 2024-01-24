@@ -11,8 +11,9 @@
 }
 a,
 a:visited {
-  color: #f9f8f8;
+  color: #2c3e50;
 }
+
 .container {
   margin: 0 auto;
   max-width: 1960px;
@@ -1116,7 +1117,9 @@ Properties Style
 .properties .item .main-button {
   text-align: center;
 }
-
+.main-button a, .main-button a:visited{
+  color: #fcf9f9;
+}
 
 /* 
 ---------------------------------------------
